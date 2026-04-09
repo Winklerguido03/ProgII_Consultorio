@@ -9,7 +9,7 @@ public class Consultorio {
 
     private int nroConsultorio;
     private String medico;
-    private List<Turno> listaTurnos = new ArrayList<>();
+    private List<Turno> turnos = new ArrayList<>();
 
     public Consultorio(int nroConsultorio, String medico) {
         this.nroConsultorio = nroConsultorio;
@@ -32,7 +32,14 @@ public class Consultorio {
         return medico;
     }
 
-    public void agregarTurno(Date dia, Time hora, int nroPaciente) {
+    public void agregarTurno(Date dia, Time hora, int nroPaciente,int nroConsultorio) {
+        Turno nuevoTurno = new Turno(dia,hora,nroPaciente,nroConsultorio);
+        turnos.add(nuevoTurno);
     }
+
+    public void cancelarTurno(Date dia,Time hora){
+
+    }
+
 
 }
