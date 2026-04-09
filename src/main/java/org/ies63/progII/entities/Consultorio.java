@@ -39,6 +39,10 @@ public class Consultorio {
 
     public void cancelarTurno(Date dia,Time hora){
 
+        List<Turno> turnosAEliminar = new ArrayList<>();
+
+
+
     }
 
 

@@ -10,7 +10,7 @@ public class administradorConexion {
 
         String dbDriver= "com.mysql.cj.jdbc.Driver";
 
-        String dbCadenaConexion="jdbc:mysql://localhost:3306/ProgII_Consultorio";
+        String dbCadenaConexion="jdbc:mysql://localhost:3306/bd_consultorio";
 
         String dbUsuario="root";
 

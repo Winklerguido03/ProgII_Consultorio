@@ -1,4 +1,4 @@
-package org.ies63.progII.DAO;
+package org.ies63.progII.interfaces;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,7 +10,7 @@ public interface adminConexion {
 
         String dbDriver = "com.mysql.cj.jdbc.Driver";
 
-        String dbCadenaConexion = "jdbc:mysql://localhost:3306/ProgII_Consultorio";
+        String dbCadenaConexion = "jdbc:mysql://localhost:3306/bd_consultorio";
 
         String dbUsuario = "root";
 

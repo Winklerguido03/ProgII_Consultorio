@@ -10,6 +10,8 @@ public class Turno {
     private int nroConsultorio;
     private int nroPaciente;
 
+    public Turno(){}
+
     public Turno(Date dia, Time hora, int nroConsultorio, int nroPaciente) {
         this.dia = dia;
         this.hora = hora;
