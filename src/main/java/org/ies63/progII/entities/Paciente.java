@@ -9,7 +9,7 @@ public class Paciente {
     public Paciente(int telefono,String nombre){
         this.telefono=telefono;
         this.nombre=nombre;
-    }jk
+    }
 
     public void setNombre(String nombre){this.nombre=nombre;}
 

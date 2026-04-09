@@ -1,0 +1,37 @@
+package org.ies63.progII.config;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class administradorConexion {
+
+    public static Connection obtenerConexion(){
+
+        String dbDriver= "com.mysql.cj.jdbc.Driver";
+
+        String dbCadenaConexion="jdbc:mysql://localhost:3306/ProgII_Consultorio";
+
+        String dbUsuario="root";
+
+        String dbPass="root";
+
+        Connection conn = null;
+
+        try {
+            Class.forName(dbDriver);
+
+            conn= DriverManager.getConnection(dbCadenaConexion,dbUsuario,dbPass);
+
+        } catch (ClassNotFoundException e) {
+            System.out.println("No se encontro el driver de la BD");
+            throw new RuntimeException(e);
+        } catch (SQLException e) {
+            System.out.println("No se pudo conectar a la BD");
+            throw new RuntimeException(e);
+        }
+        System.out.println("Conexión exitosa a la BD");
+        return conn;
+    }
+
+}
