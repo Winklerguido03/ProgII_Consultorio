@@ -2,7 +2,7 @@ package org.ies63.progII.entities;
 
 import java.sql.Time;
 import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 public class Consultorio {
@@ -10,6 +10,8 @@ public class Consultorio {
     private int nroConsultorio;
     private String medico;
     private List<Turno> turnos = new ArrayList<>();
+
+    public Consultorio(){}
 
     public Consultorio(int nroConsultorio, String medico) {
         this.nroConsultorio = nroConsultorio;
@@ -32,8 +34,8 @@ public class Consultorio {
         return medico;
     }
 
-    public void agregarTurno(Date dia, Time hora, int nroPaciente,int nroConsultorio) {
-        Turno nuevoTurno = new Turno(dia,hora,nroPaciente,nroConsultorio);
+    public void agregarTurno(Date dia, Time hora, Paciente nroPaciente,Consultorio nroConsultorio) {
+        Turno nuevoTurno = new Turno(dia,hora,nroConsultorio,nroPaciente);
         turnos.add(nuevoTurno);
     }
 
@@ -41,9 +43,6 @@ public class Consultorio {
 
         List<Turno> turnosAEliminar = new ArrayList<>();
 
-
-
     }
-
 
 }

@@ -1,22 +1,23 @@
 package org.ies63.progII.entities;
 
 import java.sql.Time;
-import java.util.Date;
+import java.sql.Date;
 
 public class Turno {
 
+    private int idTurno;
     private Date dia;
     private Time hora;
-    private int nroConsultorio;
-    private int nroPaciente;
+    private Consultorio nroConsultorio;
+    private Paciente nroPaciente;
 
     public Turno(){}
 
-    public Turno(Date dia, Time hora, int nroConsultorio, int nroPaciente) {
+    public Turno(Date dia, Time hora, Consultorio nroConsultorio,Paciente nroPaciente) {
         this.dia = dia;
         this.hora = hora;
-        this.nroConsultorio = nroConsultorio;
-        this.nroPaciente = nroPaciente;
+        this.nroConsultorio = new Consultorio();
+        this.nroPaciente = new Paciente();
     }
 
     public void setDia(Date dia) {
@@ -35,21 +36,27 @@ public class Turno {
         return hora;
     }
 
-    public void setNroConsultorio(int nroConsultorio) {
+    public void setNroConsultorio(Consultorio nroConsultorio ) {
         this.nroConsultorio = nroConsultorio;
     }
 
-    public int getNroConsultorio() {
+    public Consultorio getNroConsultorio() {
         return nroConsultorio;
     }
 
-    public void setNroPaciente(int nroPaciente) {
+    public void setNroPaciente(Paciente nroPaciente) {
         this.nroPaciente = nroPaciente;
     }
 
-    public int getNroPaciente() {
+    public Paciente getNroPaciente() {
         return nroPaciente;
     }
 
+    public int getIdTurno() {
+        return idTurno;
+    }
 
+    public void setIdTurno(int idTurno) {
+        this.idTurno = idTurno;
+    }
 }

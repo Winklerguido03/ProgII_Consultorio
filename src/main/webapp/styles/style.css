@@ -1,0 +1,38 @@
+header nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px;
+  border-bottom:1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  background-color:99E0FF;
+}
+
+nav a{
+  text-decoration:none;
+  font-weight: bold;
+  text-align:center;
+  align-items:center;
+  font-size:32px;
+
+}
+
+main{
+  display: inline-block;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center;
+  gap: 20px;
+  padding: 30px 200px 350px 200px;
+}
+
+footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px;
+  border-top:1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+
